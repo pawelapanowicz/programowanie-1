@@ -1,0 +1,15 @@
+liczba_punktow = []
+ilosc_studentow = int(input("Podaj liczbę studentów: "))
+for i in range(ilosc_studentow):
+    punkty = int(input(f"Punkty studenta {i+1}: "))
+    liczba_punktow.append(punkty)
+srednia = sum(liczba_punktow) / len(liczba_punktow)
+print("Średnia:", srednia)
+najwyzsza = max(liczba_punktow)
+print("Najwyższy wynik:", najwyzsza)
+najniższa = min(liczba_punktow)
+print("Najniższy wynik:", najniższa)
+wyniki_rosnaco = sorted(liczba_punktow)
+print("Wyniki rosnąco:", wyniki_rosnaco)
+liczba_zaliczen = sum(1 for punkty in liczba_punktow if punkty >= 50)
+print("Liczba zaliczeń:", liczba_zaliczen)
